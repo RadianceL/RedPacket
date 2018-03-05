@@ -3,11 +3,8 @@ package test.mybatis.Service.Impl;
 import org.junit.Test;
 import test.mybatis.Service.RedPacketService;
 import test.mybatis.entity.RedPacket;
-import test.mybatis.utils.RedPacketUtils;
 
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 public class RedPacketServiceImplTest {
 
@@ -15,7 +12,7 @@ public class RedPacketServiceImplTest {
 
     @Test
     public void generateRedPacket() {
-        RedPacket redPacket = service.generateRedPacket(190.00, 8, "this is Red packet");
+        RedPacket redPacket = service.generateRedPacket(18.00, 5, "this is Red packet");
         System.out.println(redPacket);
     }
 
@@ -34,7 +31,6 @@ public class RedPacketServiceImplTest {
     @Test
     public void getAll() {
         List<RedPacket> all = service.getAll();
-
         for (RedPacket red:all){
             System.out.println(red);
         }

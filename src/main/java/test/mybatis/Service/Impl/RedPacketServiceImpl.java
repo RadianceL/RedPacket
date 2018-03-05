@@ -29,6 +29,10 @@ public class RedPacketServiceImpl implements RedPacketService {
 
     public double getMoney(int id) {
         RedPacket packet = mapper.getRedPacketById(id);
+
+        if (packet.getPacket() == 0){
+            return -1;
+        }
         //lost 剩下的钱 packet 剩下多少个
         double money = RedPacketUtils.getRedPacketMoney(packet.getLost(),packet.getPacket());
         mapper.update(money,packet.getId());

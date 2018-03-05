@@ -18,7 +18,7 @@ public class RedPacketUtils {
         result = random.nextDouble()*result;
         result = result <= min ? min:result;
 
-        result = Math.floor(result*100)/100;
+        //result = Math.floor(result*100)/100;
 
         return result;
     }
