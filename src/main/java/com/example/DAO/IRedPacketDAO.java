@@ -1,7 +1,7 @@
-package test.mybatis.DAO;
+package com.example.DAO;
 
+import com.example.entity.RedPacket;
 import org.apache.ibatis.annotations.Param;
-import test.mybatis.entity.RedPacket;
 
 import java.util.List;
 

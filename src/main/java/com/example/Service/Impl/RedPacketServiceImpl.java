@@ -1,10 +1,10 @@
-package test.mybatis.Service.Impl;
+package com.example.Service.Impl;
 
-import test.mybatis.DAO.IRedPacketDAO;
-import test.mybatis.FactoryMethod.DatabaseFactory;
-import test.mybatis.Service.RedPacketService;
-import test.mybatis.entity.RedPacket;
-import test.mybatis.utils.RedPacketUtils;
+import com.example.FactoryMethod.DatabaseFactory;
+import com.example.entity.RedPacket;
+import com.example.DAO.IRedPacketDAO;
+import com.example.Service.RedPacketService;
+import com.example.utils.RedPacketUtils;
 
 import java.util.List;
 
@@ -14,7 +14,7 @@ public class RedPacketServiceImpl implements RedPacketService {
 
     private IRedPacketDAO mapper =(IRedPacketDAO) factory.getSqlSession("mybatis-config.xml",IRedPacketDAO.class);
 
-    public RedPacket generateRedPacket(double totalMoney, int number,String description) {
+    public RedPacket generateRedPacket(double totalMoney, int number, String description) {
         RedPacket redPacket = new RedPacket();
         redPacket.setLost(totalMoney);
         redPacket.setTotal(totalMoney);

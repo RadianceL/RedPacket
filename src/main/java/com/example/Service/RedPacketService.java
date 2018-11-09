@@ -1,6 +1,6 @@
-package test.mybatis.Service;
+package com.example.Service;
 
-import test.mybatis.entity.RedPacket;
+import com.example.entity.RedPacket;
 
 import java.util.List;
 

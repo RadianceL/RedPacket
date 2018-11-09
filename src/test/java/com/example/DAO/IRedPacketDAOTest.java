@@ -1,10 +1,10 @@
-package test.mybatis.DAO;
+package com.example.DAO;
 
+import com.example.FactoryMethod.DatabaseFactory;
+import com.example.entity.RedPacket;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import test.mybatis.FactoryMethod.DatabaseFactory;
-import test.mybatis.entity.RedPacket;
 
 public class IRedPacketDAOTest {
 

@@ -1,4 +1,4 @@
-package test.mybatis.utils;
+package com.example.utils;
 
 import java.util.Random;
 

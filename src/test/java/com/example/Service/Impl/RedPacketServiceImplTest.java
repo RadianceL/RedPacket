@@ -1,8 +1,8 @@
-package test.mybatis.Service.Impl;
+package com.example.Service.Impl;
 
+import com.example.Service.RedPacketService;
+import com.example.entity.RedPacket;
 import org.junit.Test;
-import test.mybatis.Service.RedPacketService;
-import test.mybatis.entity.RedPacket;
 
 import java.util.List;
 

@@ -2,16 +2,16 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="test.mybatis.DAO.IRedPacketDAO">
-    <select id="getRedPacketById" resultType="test.mybatis.entity.RedPacket">
+<mapper namespace="com.example.DAO.IRedPacketDAO">
+    <select id="getRedPacketById" resultType="com.example.entity.RedPacket">
         select * from red_packet where id = #{id}
     </select>
 
-    <select id="queryAll" resultType="test.mybatis.entity.RedPacket">
+    <select id="queryAll" resultType="com.example.entity.RedPacket">
         select * from red_packet
     </select>
 
-    <insert id="putRedPacket" parameterType="test.mybatis.entity.RedPacket">
+    <insert id="putRedPacket" parameterType="com.example.entity.RedPacket">
         insert into
           red_packet(packet,total,description,lost)
         values

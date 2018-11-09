@@ -1,4 +1,4 @@
-package test.mybatis.entity;
+package com.example.entity;
 
 public class RedPacket {
 

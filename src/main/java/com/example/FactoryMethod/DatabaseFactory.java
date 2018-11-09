@@ -1,4 +1,4 @@
-package test.mybatis.FactoryMethod;
+package com.example.FactoryMethod;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
