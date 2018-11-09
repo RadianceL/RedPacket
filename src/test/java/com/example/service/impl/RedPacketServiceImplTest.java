@@ -1,6 +1,6 @@
-package com.example.Service.Impl;
+package com.example.service.impl;
 
-import com.example.Service.RedPacketService;
+import com.example.service.RedPacketService;
 import com.example.entity.RedPacket;
 import org.junit.Test;
 

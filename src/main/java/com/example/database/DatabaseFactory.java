@@ -1,4 +1,4 @@
-package com.example.FactoryMethod;
+package com.example.database;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -8,6 +8,11 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import java.io.IOException;
 import java.io.InputStream;
 
+/**
+ * @author eddie
+ * @createTime 2018-11-08
+ * @description Mybatis 生成类
+ */
 public class DatabaseFactory {
 
     public DatabaseFactory(){

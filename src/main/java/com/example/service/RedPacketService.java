@@ -1,15 +1,21 @@
-package com.example.Service;
+package com.example.service;
 
 import com.example.entity.RedPacket;
 
 import java.util.List;
 
+/**
+ * @author eddie
+ * @createTime 2018-11-08
+ * @description 红包接口类
+ */
 public interface RedPacketService {
 
     /**
      * 生成一个红包
      * @param totalMoney
      * @param number
+     * @param description
      * @return
      */
     RedPacket generateRedPacket(double totalMoney , int number , String description);
@@ -29,7 +35,7 @@ public interface RedPacketService {
     RedPacket getRedPacketById(int id);
 
     /**
-     *
+     * 获取所有红包
      * @return
      */
     List<RedPacket> getAll();

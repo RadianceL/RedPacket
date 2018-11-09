@@ -1,6 +1,6 @@
 package com.example.DAO;
 
-import com.example.FactoryMethod.DatabaseFactory;
+import com.example.database.DatabaseFactory;
 import com.example.entity.RedPacket;
 import org.junit.Test;
 import org.slf4j.Logger;

@@ -60,6 +60,14 @@
             <version>1.7.25</version>
         </dependency>
 
+        <!-- Bean对象快速生成工具 -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.4</version>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 
 

@@ -1,18 +1,21 @@
-package com.example.Service.Impl;
+package com.example.service.impl;
 
-import com.example.FactoryMethod.DatabaseFactory;
+import com.example.database.DatabaseFactory;
 import com.example.entity.RedPacket;
 import com.example.DAO.IRedPacketDAO;
-import com.example.Service.RedPacketService;
+import com.example.service.RedPacketService;
 import com.example.utils.RedPacketUtils;
 
 import java.util.List;
 
+/**
+ * @author eddie
+ * @createTime 2018-11-08
+ * @description 红包服务实现类
+ */
 public class RedPacketServiceImpl implements RedPacketService {
 
-    private DatabaseFactory factory = new DatabaseFactory();
-
-    private IRedPacketDAO mapper =(IRedPacketDAO) factory.getSqlSession("mybatis-config.xml",IRedPacketDAO.class);
+    private IRedPacketDAO mapper =(IRedPacketDAO) DatabaseFactory.getSqlSession("mybatis-config.xml",IRedPacketDAO.class);
 
     public RedPacket generateRedPacket(double totalMoney, int number, String description) {
         RedPacket redPacket = new RedPacket();
@@ -36,8 +39,6 @@ public class RedPacketServiceImpl implements RedPacketService {
         //lost 剩下的钱 packet 剩下多少个
         double money = RedPacketUtils.getRedPacketMoney(packet.getLost(),packet.getPacket());
         mapper.update(money,packet.getId());
-
-
         return money;
     }
 
