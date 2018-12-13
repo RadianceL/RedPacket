@@ -1,10 +1,12 @@
 package com.example.service.impl;
 
-import com.example.database.DatabaseFactory;
+import com.example.dao.RedPacketRegistry;
 import com.example.entity.RedPacket;
-import com.example.dao.IRedPacketDAO;
 import com.example.service.RedPacketService;
 import com.example.utils.RedPacketUtils;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -13,10 +15,13 @@ import java.util.List;
  * @createTime 2018-11-08
  * @description 红包服务实现类
  */
+@Service
 public class RedPacketServiceImpl implements RedPacketService {
 
-    private IRedPacketDAO mapper =(IRedPacketDAO) DatabaseFactory.getSqlSession("mybatis-config.xml",IRedPacketDAO.class);
+    @Autowired
+    private RedPacketRegistry redPacketRegistry;
 
+    @Override
     public RedPacket generateRedPacket(double totalMoney, int number, String description) {
         RedPacket redPacket = new RedPacket();
         redPacket.setLost(totalMoney);
@@ -24,32 +29,36 @@ public class RedPacketServiceImpl implements RedPacketService {
         redPacket.setPacket(number);
         redPacket.setDescription(description);
 
-        int bool = mapper.putRedPacket(redPacket);
+        RedPacket bool = redPacketRegistry.save(redPacket);
 
         System.out.println(bool);
         return redPacket;
     }
 
+    @Override
     public double getMoney(int id) {
-        RedPacket packet = mapper.getRedPacketById(id);
+//        RedPacket packet = redPacketRegistry.getOne(id);
+//
+//        if (packet.getPacket() == 0){
+//            return -1;
+//        }
+//        //lost 剩下的钱 packet 剩下多少个
+//        double money = RedPacketUtils.getRedPacketMoney(packet.getLost(),packet.getPacket());
+//        redPacketRegistry.(money,packet.getId());
+//        return money;
 
-        if (packet.getPacket() == 0){
-            return -1;
-        }
-        //lost 剩下的钱 packet 剩下多少个
-        double money = RedPacketUtils.getRedPacketMoney(packet.getLost(),packet.getPacket());
-        mapper.update(money,packet.getId());
-        return money;
+        return 1.1;
     }
 
+    @Override
     public RedPacket getRedPacketById(int id) {
-        RedPacket packet = mapper.getRedPacketById(id);
+        RedPacket packet = redPacketRegistry.getOne(id);
         return packet;
     }
 
+    @Override
     public List<RedPacket> getAll() {
-        List<RedPacket> list = mapper.queryAll();
-
+        List<RedPacket> list = redPacketRegistry.findAll();
         return list;
     }
 

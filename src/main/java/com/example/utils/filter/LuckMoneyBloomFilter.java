@@ -13,9 +13,8 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @createTime 2018-12-13
  * @description 布隆过滤器过滤不存在的红包请求
  */
-@Slf4j
 @Component
-public class LuckMoneyBloomFilter {
+public class LuckMoneyBloomFilter{
 
     /**
      * 布隆数组容量
@@ -36,15 +35,13 @@ public class LuckMoneyBloomFilter {
 
     public static void add(String orderId){
         final boolean success = bloomFilter.put(orderId);
-        log.info("订单{}:添加状态{}", orderId, success);
+
     }
 
     public static boolean contain(String orderId){
         final boolean isContain = bloomFilter.mightContain(orderId);
         final int size = count.getAndIncrement();
-        log.info("订单{}: 第{}个非法请求不存在订单", orderId, size);
         return isContain;
     }
-
 
 }

@@ -2,7 +2,7 @@ package com.example.service.impl;
 
 import com.example.service.RedPacketService;
 import com.example.entity.RedPacket;
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 import java.util.List;
 
