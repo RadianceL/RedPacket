@@ -1,4 +1,4 @@
-package com.example.DAO;
+package com.example.dao;
 
 import com.example.database.DatabaseFactory;
 import com.example.entity.RedPacket;

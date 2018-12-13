@@ -2,7 +2,7 @@ package com.example.service.impl;
 
 import com.example.database.DatabaseFactory;
 import com.example.entity.RedPacket;
-import com.example.DAO.IRedPacketDAO;
+import com.example.dao.IRedPacketDAO;
 import com.example.service.RedPacketService;
 import com.example.utils.RedPacketUtils;
 

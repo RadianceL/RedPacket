@@ -2,6 +2,11 @@ package com.example.utils;
 
 import java.util.Random;
 
+/**
+ * 红包算法
+ * @date 2018-04-22
+ * @author Eddie Lee
+ */
 public class RedPacketUtils {
 
     public static double getRedPacketMoney(double money,int packetNumber){

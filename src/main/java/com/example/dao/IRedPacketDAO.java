@@ -1,4 +1,4 @@
-package com.example.DAO;
+package com.example.dao;
 
 import com.example.entity.RedPacket;
 import org.apache.ibatis.annotations.Param;
