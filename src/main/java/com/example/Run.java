@@ -11,15 +11,13 @@ import org.springframework.context.support.FileSystemXmlApplicationContext;
  * @createTime 2018-12-13
  * @description 启动
  */
-public class run {
-
+public class Run {
 
     public static void main(String[] args) {
-
         ApplicationContext context = new FileSystemXmlApplicationContext("classpath:application.xml");
-
         final RedPacketRegistry bean = context.getBean(RedPacketRegistry.class);
         final RedPacket save = bean.save(new RedPacket(1,2.1,2.1,"红包"));
         System.out.println(save);
     }
+
 }
