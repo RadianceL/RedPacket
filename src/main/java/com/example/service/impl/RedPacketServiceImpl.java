@@ -1,10 +1,8 @@
 package com.example.service.impl;
 
-import com.example.dao.RedPacketRegistry;
+import com.example.registry.RedPacketRegistry;
 import com.example.entity.RedPacket;
 import com.example.service.RedPacketService;
-import com.example.utils.RedPacketUtils;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

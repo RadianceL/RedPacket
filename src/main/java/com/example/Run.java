@@ -1,6 +1,6 @@
 package com.example;
 
-import com.example.dao.RedPacketRegistry;
+import com.example.registry.RedPacketRegistry;
 import com.example.entity.RedPacket;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;

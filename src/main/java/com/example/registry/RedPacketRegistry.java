@@ -1,4 +1,4 @@
-package com.example.dao;
+package com.example.registry;
 
 import com.example.entity.RedPacket;
 import org.springframework.data.jpa.repository.JpaRepository;

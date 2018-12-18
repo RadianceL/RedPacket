@@ -64,5 +64,5 @@
     <!-- 开启事务注解 -->
     <tx:annotation-driven/>
     <!--指定Spring Data JPA要进行扫描的包,该包中的类框架会自动为其创建代理-->
-    <jpa:repositories base-package="com.example.dao" />
+    <jpa:repositories base-package="com.example.registry" />
 </beans>
